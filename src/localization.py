@@ -1,6 +1,4 @@
-import json, string
-import os
-import sys
+import json, string, os, sys
 
 def get_base_path():
     if getattr(sys, 'frozen', False):
@@ -15,4 +13,7 @@ def get_localized(key):
 
     json_path = os.path.join(base_path, 'Languages', f'{language}.json')
     with open(json_path, 'r') as file:
-        return json.load(file)[key]
+        try :
+            return json.load(file)[key]
+        except :
+            return ""

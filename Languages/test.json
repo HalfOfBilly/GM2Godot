@@ -9,8 +9,8 @@
 "README, Language, Author, Version, are not used by GM2Godot, they are simply a means of documentation and attribution."
 ],
 
-"Language" : "English",
-"Language_Code" : "eng",
+"Language" : "Test_Language",
+"Language_Code" : "test",
 "Author" : "written by Infiland, structured by HalfofBilly",
 "Version" : "0.0.14",
 
@@ -23,11 +23,11 @@
 "About_Error_Contributors_NotFound" : "Failed to load contributors: {error}",
 "About_Copyright" : "© {current_year} Infiland. All rights reserved.",
 
-"Console_ProjectFound" : "{file_name} project file found: {files}",
-"Console_Error_NotInitialized" : "Console not initialized. Message: {message}",
-"Console_Error_InvalidProject" : ["Invalid {file_name} Project", "No {file_extension} file found in the selected {file_name} project folder."],
-"Console_Error_MultipleGenericFiles" : ["Multiple {file_extension} Files", "Multiple {file_extension} files found: {files}. Please ensure only one {file_extension} file is present."],
-"Console_Error_MissingDirectories" : "Please select both GameMaker and Godot project paths.",
+"Console_ProjectFound" : "{file_name} :3 {files}",
+"Console_Error_NotInitialized" : "uWu {message}",
+"Console_Error_InvalidProject" : [" {file_name} :3", "No {file_extension} :3 {file_name} project folder."],
+"Console_Error_MultipleGenericFiles" : [":3 Multiple {file_extension}", "Multiple {file_extension} :3 {files}{file_extension}."],
+"Console_Error_MissingDirectories" : "Please :3",
 "Console_Error_MissingGamemakerFile" : "Error: No .yyp file found in the GameMaker project folder.",
 "Console_Error_MultipleGamemakerFiles" : "Warning: Multiple .yyp files found: {yyp_files}. Using the first one.",
 "Console_Error_MissingGodotFile" : "Error: No project.godot file found in the Godot project folder.",
@@ -98,7 +98,7 @@
 "Menu_Title" : "GM2Godot v{version}",
 "Menu_UI_Button_Convert" : "Convert",
 "Menu_UI_Button_Stop" : "stop",
-"Menu_UI_Button_Settings" : "Settings",
+"Menu_UI_Button_Settings" : "Settings:3",
 "Menu_GameMaker" : "GameMaker",
 "Menu_Godot" : "Godot",
 "Menu_UI_Directory_Heading" : "{Game_Engine} Project Path:",
@@ -112,12 +112,12 @@
 "ReleaseNotes_Error_NoInternet" : ["Error", "Unable to fetch release notes. Please check your internet connection and try again."],
 "ReleaseNotes_Error_Generic" : "Error fetching release notes: {error}",
 
-"Language_Select_Title" : "Select language",
+"Language_Select_Title" : "Select language :3",
 "Language_Select_Button_Save" : "Apply",
 "Language_Select_Button_Cancel" : "Cancel",
 
-"Settings_Title" : "Conversion Settings",
-"Settings_Files_Heading" : "Select files to convert:",
+"Settings_Title" : ":3",
+"Settings_Files_Heading" : "Select files to convert :3",
 "Settings_Categories_Headings" : ["Assets", "Project", "WIP"],
 "Settings_Categories_Contents" : [["sprites", "fonts", "sounds"], ["game_icon", "project_name", "project_settings", "audio_buses", "notes"], ["objects", "shaders", "tilesets"]],
 
