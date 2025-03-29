@@ -6,6 +6,7 @@
 ">> Changing either of these will cause a crash.",
 
 "Language and Language_Code are read by GM2Godot to list the file as a language option.",
+"Language_Code must be same as file name (i.e., eng for eng.json)",
 "README, Language, Author, Version, are not used by GM2Godot, they are simply a means of documentation and attribution."
 ],
 

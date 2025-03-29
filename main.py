@@ -6,7 +6,6 @@ from functools import partial
 import requests
 import markdown2
 import platform
-import glob
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk, font as tkfont
 from tkhtmlview import HTMLLabel
