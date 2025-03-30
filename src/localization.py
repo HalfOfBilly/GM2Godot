@@ -16,4 +16,12 @@ def get_localized(key):
         try :
             return json.load(file)[key]
         except :
+            pass
+
+    # If an exception is thrown, the script will attempt to load the key from eng.json
+    with open(os.path.join(base_path, 'Languages', 'eng.json'), 'r') as file:
+        try :
+            return json.load(file)[key]
+        except :
             return ""
+    # Finally, if eng.json fails, the script will return a blank string

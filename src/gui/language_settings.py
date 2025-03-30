@@ -20,9 +20,9 @@ class language_options_window :
 
     def apply_new_language(self):
         try :
-            with open(f"{get_base_path()}/Languages/{self.combobox_language.get()}.json", 'r') as file:
+            with open(f"{get_base_path()}/Languages/{self.available_languages_keys[self.combobox_language.current()]}.json", 'r') as file:
                 new_language = json.load(file)["Language_Code"]
-        except :
+        except:
             new_language = "eng" # Fallback to English
 
         with open(f"{get_base_path()}/Current Language", 'w') as file:
@@ -46,28 +46,37 @@ class language_options_window :
         main_frame.pack(fill=tk.BOTH, expand=True)
 
         available_languages_directory = glob.glob(f"{get_base_path()}/Languages/*.json")
-        available_languages_names = []
+        self.available_languages_names = []
+        self.available_languages_keys = []
+        self.current_language = 0
+        self.current_language_key = ""
+
+        try :
+            with open(f"{get_base_path()}/Current Language", 'r') as file:
+                self.current_language_key = file.read()
+        except :
+            pass
 
         for i in range(len(available_languages_directory)):
                 with open(available_languages_directory[i], 'r') as file:
                     try :
-                        available_languages_names.append(json.load(file)["Language_Code"])
-                    except :
+                        language_json_file = json.load(file)
+                        self.available_languages_keys.append(language_json_file["Language_Code"])
+                        self.available_languages_names.append(language_json_file["Language"])
+
+                        if (language_json_file["Language_Code"] == self.current_language_key):
+                            self.current_language = i
+                    except:
                         pass
 
         combobox_frame = ttk.Frame(main_frame, style="TFrame")
         combobox_frame.pack(fill=tk.X, pady=(10, 0))
 
         self.combobox_language = ModernCombobox(combobox_frame,
-                                                values=available_languages_names,
+                                                values=self.available_languages_names,
                                                 state="readonly")
         self.combobox_language.pack(fill=tk.X)
-
-        try :
-            with open(f"{get_base_path()}/Current Language", 'r') as file:
-                self.combobox_language.set(file.read())
-        except :
-            pass
+        self.combobox_language.set(self.available_languages_names[self.current_language])
 
         # Buttons frame
         button_frame = ttk.Frame(main_frame, style="TFrame")
